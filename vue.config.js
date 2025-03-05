@@ -1,5 +1,10 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
-      ? '/CHART/'
-      : '/'
-  }
+    configureWebpack: {
+      resolve: {
+        alias: {
+          '@': require('path').resolve(__dirname, 'src')
+        }
+      }
+    },
+    publicPath: process.env.NODE_ENV === 'production' ? '/CHART/' : '/',
+}
