@@ -1,10 +1,5 @@
 module.exports = {
-    configureWebpack: {
-      resolve: {
-        alias: {
-          '@': require('path').resolve(__dirname, 'src')
-        }
-      }
-    },
-    publicPath: process.env.NODE_ENV === 'production' ? '/CHART/' : '/',
-}
+    publicPath: process.env.NODE_ENV === 'production'
+      ? '/Table_chart/' // должно совпадать с именем репозитория!
+      : '/'
+  }  
